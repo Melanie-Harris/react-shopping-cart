@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductContext from '../contexts/ProductContext';
+import {ProductContext} from '../contexts/ProductContext';
 import { useContext } from 'react';
 
 // Components
@@ -9,7 +9,7 @@ const Products = () => {
 	const {products, addItem} = useContext(ProductContext);
 	return (
 		<div className="products-container">
-			{props.products.map(() => (
+			{products.map((product) => (
 				<Product
 					key={product.key}
 					product={product}
